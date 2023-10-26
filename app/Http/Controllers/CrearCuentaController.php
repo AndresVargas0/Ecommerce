@@ -9,7 +9,7 @@ class CrearCuentaController extends Controller
 {
     public function index(){
         //dd('crearcuenta');
-        return view('home');
+        return view('Layouts.navCount');
     }
 
     public function store(Request $request){
@@ -30,6 +30,6 @@ class CrearCuentaController extends Controller
             'email'=> $request->email,
             'password'=> $request->password,
       ]);
-      return redirect()->route('home'); 
+        return redirect()->route('navCount');
     }
 }
