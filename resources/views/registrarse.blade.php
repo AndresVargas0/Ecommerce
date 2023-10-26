@@ -35,8 +35,15 @@ Registrarse
             <span>Inicia Sesion</span>
             <label for="">Correo</label>
             <input id="email" name="email" type="text" placeholder="correo">
+            @error('email')
+                <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
+            @enderror
             <label for="">Contraseña</label>
             <input id="pass1" name="pass1" type="text" placeholder="contraseña">
+            @error('password')
+                <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
+            @enderror
+            <button type="submit">Iniciar Sesion</button>
         </form>
     </div>
 @endsection

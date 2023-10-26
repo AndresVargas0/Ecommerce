@@ -1,3 +1,47 @@
-h1{
-    margin-top: 50px;
+.box-cards{
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 15px 20px;
+    display: flex;
+    padding: 2vh;
+    width: 60vh;
+    max-height: 270px;
+    font-family: 'Work Sans', sans-serif;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+}
+img{
+    width: 200px;
+    height: 250px;
+}
+h4{
+    padding: 1vh;
+}
+.title{
+    text-align: center;
+}
+span{
+    margin-top: -20px;
+    color: red;
+    display: flex;
+}
+#price{
+    font-size: 14px;
+    text-decoration: line-through;
+}
+#discount{
+    font-size: large;
+}
+button{
+    text-transform: uppercase;
+    background: orange;
+    color: white;
+     border: none;
+     border-radius: 5px;
+     height: 5vh;
+     width: 25vh;
+     margin-top: -5px;
+     margin-bottom: 5px;
 }

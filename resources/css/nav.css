@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
 
 body{
     box-sizing: border-box;
@@ -30,4 +35,5 @@ a{
     color: black;
     font-size: large;
     margin: auto 20px;
+    cursor: pointer;
 }

@@ -1,10 +1,16 @@
+.forms{
+    display: flex;
+}
 .form1{
+    margin: auto;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-right: -150px;
 }
 .form2{
+    margin: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -36,6 +42,11 @@ button{
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+    transition: .25s ease-in-out;
+}
+button:hover{
+    transform: scale(1.05);
+    transition: .25s ease-in-out;
 }
 p{
     font-family: 'Hind Siliguri', sans-serif;

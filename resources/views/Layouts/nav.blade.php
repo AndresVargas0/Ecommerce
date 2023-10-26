@@ -13,7 +13,7 @@
             <a>ECOMMERCE</a>
         </div>
         <div class="rutas">
-            <a href="{{route('home')}}">Inicio</a>
+            <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('home')}}">Inicio</a>
             <a>Categorias</a>
             <a href="{{route('forms')}}">Resgistrarse</a>
         </div>
