@@ -13,13 +13,13 @@
             <a>ECOMMERCE</a>
         </div>
         <div class="rutas">
-            <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('home')}}"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('homeCount')}}"><i class="fa-solid fa-house"></i> Inicio</a>
             <a><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
-            <a href="{{route('forms')}}"><i class="fa-solid fa-user"></i> Cuenta</a>
+            <a href=""><i class="fa-solid fa-user"></i> Cuenta</a>
         </div>
     </nav>
     <main>
-        @yield('home')
+        @yield('homeCount')
         @yield('perfil')
     </main>
 </body>
