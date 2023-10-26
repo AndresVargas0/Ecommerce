@@ -15,7 +15,7 @@
         <div class="rutas">
             <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('homeCount')}}"><i class="fa-solid fa-house"></i> Inicio</a>
             <a><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
-            <a href=""><i class="fa-solid fa-user"></i> Cuenta</a>
+            <a href="{{route('perfil')}}"><i class="fa-solid fa-user"></i> Cuenta</a>
         </div>
     </nav>
     <main>
