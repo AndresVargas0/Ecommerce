@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class CrearCuentaController extends Controller
 {
     public function index(){
-        dd('crearcuenta');
-        return view('registrarse');
+        //dd('crearcuenta');
+        return view('home');
     }
 
     public function store(Request $request){
@@ -30,6 +30,6 @@ class CrearCuentaController extends Controller
             'email'=> $request->email,
             'password'=> $request->password,
       ]);
-      return redirect()->route('crearcuenta', auth()->user()->name); 
+      return redirect()->route('home'); 
     }
 }

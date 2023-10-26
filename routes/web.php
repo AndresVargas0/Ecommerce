@@ -7,6 +7,7 @@ use App\Http\Controllers\IngresarCuentaController;
 Route::get('/', function () {return view('Layouts.nav');})->name('nav');
 Route::get('home', function () {return view('home');})->name('home');
 Route::get('registrarse', function () {return view('registrarse');})->name('forms');
+Route::get('/navCount', function (){return view('registrarse');})->name('navCount');
 
 Route::get('/crearcuenta',[CrearCuentaController::class, 'index']);
 Route::post('/crearcuenta',[CrearCuentaController::class,'store'])->name('crearcuenta.post');

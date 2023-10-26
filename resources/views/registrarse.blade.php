@@ -34,12 +34,12 @@ Registrarse
             @csrf
             <span>Inicia Sesion</span>
             <label for="">Correo</label>
-            <input id="email" name="email" type="text" placeholder="CORREO">
+            <input id="email" name="email" type="email" placeholder="CORREO">
             @error('email')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <label for="">Contraseña</label>
-            <input id="pass1" name="pass1" type="text" placeholder="CONTRASEÑA">
+            <input id="password" name="password" type="password" placeholder="CONTRASEÑA">
             @error('password')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror

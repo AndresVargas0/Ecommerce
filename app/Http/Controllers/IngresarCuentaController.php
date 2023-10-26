@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 class IngresarCuentaController extends Controller
 {
+    public function index(){
+        return view('home');
+    }
     public function store(Request $request){
+        // dd($request);
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required',
@@ -15,8 +19,8 @@ class IngresarCuentaController extends Controller
             return back()->with('mensaje', 'Credenciales Incorrectas');
         }
         elseif (auth()->user()->email === 'Admin@gmail.com') {
-            return redirect()->route('home');
+            return redirect()->route('Layouts.navCount');
         }
-        return redirect()->route('ingresarcuenta.post');
+        return redirect()->route('Layouts.navCount');
     }
 }

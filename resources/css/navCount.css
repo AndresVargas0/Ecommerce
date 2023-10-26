@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.nav{
+    background-color: orange;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.logo{
+    font-family: 'Nosifer', sans-serif;
+    margin: auto;
+    margin-left: 10px;
+}
+.rutas{
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin: auto 20px;
+    cursor: pointer;
+}
