@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class CrearCuentaController extends Controller
 {
     public function index(){
+        dd('crearcuenta');
         return view('registrarse');
     }
 
@@ -15,19 +16,19 @@ class CrearCuentaController extends Controller
 
         $this->validate($request,[
             'user' => 'required',
-            'email' => 'required|unique:users|email',
-            'pass1' => 'required|confirmed|min:4'
+            'email' => 'required|unique:Users|email',
+            'password' => 'required|confirmed|min:4',
         ]);
         
         User::create([
             'user' => $request ->user,
             'email' => $request ->email,
-            'pass1' => Hash::make($request ->pass1)
+            'pass1' => Hash::make($request ->password)
         ]);
 
         auth()->attempt([
             'email'=> $request->email,
-            'pass1'=> $request->pass1
+            'password'=> $request->password,
       ]);
       return redirect()->route('forms', auth()->user()->name); 
     }
