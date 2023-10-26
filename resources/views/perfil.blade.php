@@ -3,7 +3,7 @@
 Comercio Nacional e Internacional
 @endsection
 @section('perfil')
-@vite('resources/css/homeCount.css')
+@vite('resources/css/perfilCount.css')
 <body>
     <form action="">
         <div class="img-destino mt-10 flex flex-col">
