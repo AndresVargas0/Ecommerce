@@ -16,17 +16,19 @@ label{
     font-family: 'Exo 2', sans-serif;
     margin: 10px auto;
     text-align: left;
-    width: 200px;
+    width: 250px;
 }
 input{
+    text-transform: uppercase;
     font-family: 'Hind Siliguri', sans-serif;
-    width: 200px;
+    width: 250px;
+    height: 35px;
     margin: auto;
     border: 1px solid rgba(128, 128, 128, 0.459);
     border-radius: 5px;
 }
 button{
-    width: 200px;
+    width: 250px;
     margin: 20px auto;
     background-color: orange;
     border: none;
@@ -34,4 +36,14 @@ button{
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+}
+p{
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: red;
+    width: 250px;
+    padding: 5px;
+    margin: auto;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
 }
