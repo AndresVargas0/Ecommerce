@@ -30,6 +30,6 @@ class CrearCuentaController extends Controller
             'email'=> $request->email,
             'password'=> $request->password,
       ]);
-      return redirect()->route('forms', auth()->user()->name); 
+      return redirect()->route('crearcuenta', auth()->user()->name); 
     }
 }

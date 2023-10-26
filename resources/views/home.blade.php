@@ -16,10 +16,24 @@ Comercio Nacional e Internacional
                     <h4 id="discount">S/.250.00</h4>
                     <h4 id="price">S/.300.00</h4>
                 </span>
-                <button>Añadir al Carrito</button>
+                <button id="alert">Añadir al Carrito</button>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             </div>
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('alert').addEventListener('click', function() {
+    Swal.fire({
+    title: 'Producto',
+    imageUrl: "{{asset('imgs/img1.jpg')}}",
+    imageWidth: 200,
+    imageHeight: 200,
+    html:'<button>comprar</button>',
+    position: 'center',
+    showCloseButton: true
+        });
+    });
+</script>
 <script src="https://kit.fontawesome.com/880d240d27.js" crossorigin="anonymous"></script>
 @endsection

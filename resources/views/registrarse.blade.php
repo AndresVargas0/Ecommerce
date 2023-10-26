@@ -9,37 +9,37 @@ Registrarse
             @csrf
             <span>Crea una Cuenta</span>
             <label for="">Username</label>
-            <input id="user" name="user" type="text" placeholder="username">
+            <input id="user" name="user" type="text" placeholder="USERNAME">
             @error('user')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <label for="">Correo</label>
-            <input id="email" name="email" type="text" placeholder="correo">
+            <input id="email" name="email" type="text" placeholder="CORREO">
             @error('email')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <label for="">Contraseña</label>
-            <input id="password" name="password" type="text" placeholder="contraseña">
+            <input id="password" name="password" type="text" placeholder="CONTRASEÑA">
             @error('password')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <label for="">Confirmar Contraseña</label>
-            <input id="password_confirmation" name="password_confirmation" type="text" placeholder="contraseña">
+            <input id="password_confirmation" name="password_confirmation" type="text" placeholder="CONTRASEÑA">
             @error('password_confirmation')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <button type="submit">Crear</button>
         </form>
-        <form class="form2" action="">
+        <form class="form2" action="{{route('ingresarcuenta.post')}}" method="POST">
             @csrf
             <span>Inicia Sesion</span>
             <label for="">Correo</label>
-            <input id="email" name="email" type="text" placeholder="correo">
+            <input id="email" name="email" type="text" placeholder="CORREO">
             @error('email')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
             <label for="">Contraseña</label>
-            <input id="pass1" name="pass1" type="text" placeholder="contraseña">
+            <input id="pass1" name="pass1" type="text" placeholder="CONTRASEÑA">
             @error('password')
                 <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{$message}}</p>
             @enderror
