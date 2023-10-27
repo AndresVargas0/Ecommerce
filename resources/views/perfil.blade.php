@@ -5,7 +5,8 @@ Comercio Nacional e Internacional
 @section('perfil')
 @vite('resources/css/perfilCount.css')
 <body>
-    <form action="">
+    <form action="{{route('agregarproductos.post')}}" method="POST" novalidate>
+        @csrf
         <div class="img-destino mt-10 flex flex-col">
             <div class="form-group">
                 <label for="image">Imagen:<br></label>
@@ -22,13 +23,14 @@ Comercio Nacional e Internacional
         <label for="">Descuento</label>
         <input type="text" id="discount" name="discount" placeholder="DESCUENTO">
         <label for="">Categoria</label>
-        <select type="text" id="producto" name="Categoria">
+        <select type="text" id="categoria" name="categoria">
             <option value="Juegos">Juegos</option>
             <option value="Accesorios">Accesorios</option>
             <option value="Prendas de Vestir">Prendas de Vestir</option>
             <option value="Electronica">Electronica</option>
-            <option value="Hpgar">Hogar</option>
+            <option value="Hogar">Hogar</option>
         </select>
+        <button type="submit">Publicar</button>
     </form>
 </body>
 @endsection

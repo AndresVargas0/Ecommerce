@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CrearCuentaController;
 use App\Http\Controllers\IngresarCuentaController;
+use App\Http\Controllers\AgregarProductoController;
 
 Route::get('/', function () {return view('Layouts.nav');})->name('nav');
 Route::get('/home', function () {return view('home');})->name('home');
@@ -16,3 +17,6 @@ Route::post('/crearcuenta',[CrearCuentaController::class,'store'])->name('crearc
 
 Route::get('/ingresarcuenta',[IngresarCuentaController::class, 'index']);
 Route::post('/ingresarcuenta',[IngresarCuentaController::class, 'store'])->name('ingresarcuenta.post');
+
+Route::get('/agregarproductos',[AgregarProductoController::class, 'index']);
+Route::post('/agregarproducts',[AgregarProductoController::class, 'store'])->name('agregarproductos.post');
