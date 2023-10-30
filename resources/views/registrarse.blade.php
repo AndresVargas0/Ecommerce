@@ -30,7 +30,7 @@ Registrarse
             @enderror
             <button type="submit">Crear</button>
         </form>
-        <form class="form2" action="{{route('ingresarcuenta.post')}}" method="POST">
+        <form class="form2" action="{{route('ingresarcuenta.post')}}" method="POST" novalidate>
             @csrf
             <span>Inicia Sesion</span>
             <label for="">Correo</label>
