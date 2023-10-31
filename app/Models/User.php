@@ -15,7 +15,7 @@ class User extends Authenticatable
     protected $fillable = [
         'user',
         'email',
-        'pass1',
+        'password',
     ];
 
     protected $hidden = [
@@ -27,4 +27,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function productos(){
+        return $this->hasMany(Productos::class);
+    }
 }

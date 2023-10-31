@@ -14,7 +14,16 @@
         </div>
         <div class="rutas">
             <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('home')}}"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
+            <div class="dropdown">
+                <a id="categorias-dropdown-toggle"><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
+                <div class="dropdown-content" id="categorias-dropdown">
+                    <a href="#">Juegos</a>
+                    <a href="#">Accesorios</a>
+                    <a href="#">Prendas de Vestir</a>
+                    <a href="#">Electronica</a>
+                    <a href="#">Hogar</a>
+                </div>
+            </div>
             <a href="{{route('forms')}}"><i class="fa-solid fa-user"></i> Registrarse</a>
         </div>
     </nav>
@@ -23,4 +32,16 @@
         @yield('registrarse')
     </main>
 </body>
+<script>
+    const toggleButton = document.getElementById('categorias-dropdown-toggle');
+    const dropdown = document.getElementById('categorias-dropdown');
+
+    toggleButton.addEventListener('click', function () {
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
+</script>
 </html>

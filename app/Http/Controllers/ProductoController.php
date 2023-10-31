@@ -10,7 +10,7 @@ class ProductoController extends Controller
     {
         $productos = Productos::all();
 
-        return view('packviajes', compact('destinos'));
+        return view('homeCount', compact('productos'));
        //dd($productos);
     }
 }

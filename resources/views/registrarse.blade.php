@@ -32,6 +32,9 @@ Registrarse
         </form>
         <form class="form2" action="{{route('ingresarcuenta.post')}}" method="POST" novalidate>
             @csrf
+            @if (session('mensaje'))
+                <p>{{session('mensaje')}}</p>
+            @endif
             <span>Inicia Sesion</span>
             <label for="">Correo</label>
             <input id="email" name="email" type="email" placeholder="CORREO">

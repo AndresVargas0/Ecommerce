@@ -23,7 +23,7 @@ class CrearCuentaController extends Controller
         User::create([
             'user' => $request ->user,
             'email' => $request ->email,
-            'pass1' => Hash::make($request ->password)
+            'password' => Hash::make($request ->password)
         ]);
 
         auth()->attempt([

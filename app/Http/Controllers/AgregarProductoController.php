@@ -18,15 +18,16 @@ class AgregarProductoController extends Controller
         $request->validate([
             'producto' => 'required',
             'cantidad' => 'required',
+            'description' =>'required',
             'price' => 'required',
             'discount' => 'required',
-
             'categoria' =>'required',
         ]);
 
         Productos::create([
             'producto' => $request->producto,
             'cantidad'=> $request->cantidad,
+            'description' =>$request->description,
             'price' => $request->price,
             'discount' => $request->discount,
             'categoria' => $request->categoria,

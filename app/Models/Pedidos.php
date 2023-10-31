@@ -5,21 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Productos extends Model
+class Pedidos extends Model
 {
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'producto',
+        'producto_id',
         'description',
         'cantidad',
         'price',
-        'discount',
-        'categoria',
-        ''
+        'ubication',
     ];
-
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Productos;
 class IngresarCuentaController extends Controller
 {
     public function index(){
@@ -11,7 +11,7 @@ class IngresarCuentaController extends Controller
     }
     
     public function store(Request $request){
-        //dd($request->all());
+        // dd($request->all());
         $this->validate($request, [
             'email' => 'required',
             'password' => 'required',
@@ -20,12 +20,12 @@ class IngresarCuentaController extends Controller
         if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
             return back()->with('mensaje', 'Credenciales Incorrectas');
         }
-        $user = auth()->user();
-        
-        if ($user->email === 'admin@gmail.com') {
-            return redirect()->route('navCount');
-        } else {
-            return redirect()->route('navHome');
-        }     
+        $productos = Productos::all();
+        return view('homeCount',compact('productos'));
+        // if ($user->email === 'admin@gmail.com') {
+        //     return redirect()->route('navCount');
+        // } else {
+        //     return redirect()->route('homeCount');
+        // }     
     }
 }

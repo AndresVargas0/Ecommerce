@@ -1,17 +1,104 @@
+.perfil{
+    margin-top: 100px;
+}
 form{
-    margin-top: 20px;
     font-family: 'Exo 2', sans-serif;
-    width: 30%;
-    margin: auto;
+    margin:  10px auto;
     display: flex;
+    flex-wrap: wrap;
+    align-items: start;
     flex-direction: column;
 }
+.title_form{
+    margin: 4px 20px;
+}
 label{
-    margin: 10px;
+    margin: 2px 20px;
 }
 input{
+    width: 35vh;
+    margin: 8px 20px;
     padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
 }
 select{
+    width: 35vh;
+    margin: 8px 20px;
     padding: 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
 }
+.btn_publicar{
+    margin: 18vh auto auto 20vh;
+    height: 5vh;
+    width: 20vh;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    height: 60vh;
+    width: 90vh;
+}
+.edit_form{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    height: 15vh;
+    width: 70vh;
+}
+span{
+    font-family: 'Exo 2', sans-serif;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bolder;
+}
+.btn_vender{
+    background-color: green;
+    color: white;
+    border: none;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1.8vh;
+    margin: auto 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn_editperfil{
+    background-color: orange;
+    color: white;
+    border: none;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1.8vh;
+    margin: auto 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.user{
+    margin: auto 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    h5{
+        margin-top: -20px;
+        color: rgba(0, 0, 0, 0.27);
+    }

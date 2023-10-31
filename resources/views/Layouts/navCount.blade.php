@@ -8,19 +8,40 @@
     @vite('resources/css/navCount.css')
 </head>
 <body>
-<nav class="nav">
+    <nav class="nav">
         <div class="logo">
             <a>ECOMMERCE</a>
         </div>
         <div class="rutas">
-            <a class="hover:scale-125 transition-transform ease-in-out" href="{{route('homeCount')}}"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
-            <a href="{{route('perfil')}}"><i class="fa-solid fa-user"></i> Cuenta</a>
+            <a class="hover:scale-125 transition-transform ease-in-out" href="{{ route('homeCount') }}"><i class="fa-solid fa-house"></i> Inicio</a>
+            <div class="dropdown">
+                <a id="categorias-dropdown-toggle"><i class="fa-solid fa-square-caret-down"></i> Categorias</a>
+                <div class="dropdown-content" id="categorias-dropdown">
+                    <a href="#">Juegos</a>
+                    <a href="#">Accesorios</a>
+                    <a href="#">Prendas de Vestir</a>
+                    <a href="#">Electronica</a>
+                    <a href="#">Hogar</a>
+                </div>
+            </div>
+            <a href="{{ route('perfil') }}"><i class="fa-solid fa-user"></i> Cuenta</a>
         </div>
-    </nav>
+    </nav>    
     <main>
         @yield('homeCount')
         @yield('perfil')
     </main>
 </body>
+<script>
+    const toggleButton = document.getElementById('categorias-dropdown-toggle');
+    const dropdown = document.getElementById('categorias-dropdown');
+
+    toggleButton.addEventListener('click', function () {
+        if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
+</script>
 </html>
