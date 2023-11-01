@@ -8,15 +8,16 @@ Comercio Nacional e Internacional
     <div class="box-cards">
         <div class="card">
             @foreach($productos as $datos)
-            <img src="{{asset('imgs/img1.jpg')}}" alt="">
+            <img src="{{asset('imgs/agua.jpg')}}" alt="">
             <div class="content">
                 <h2 class="title">{{$datos->producto}}</h1>
-                <p>{{$datos->dsecription}}</p>
+                <p class="description">{{$datos->description}}</p>
                 </h3>
                 <span>
-                    <h4 id="discount">S/.250.00</h4>
-                    <h4 id="price">S/.300.00</h4>
+                    <h4 id="discount">S/.{{$datos->price - $datos->discount}}</h4>
+                    <h4 id="price">S/.{{$datos->price}}</h4>
                 </span>
+                <p class="description">{{$datos->categoria}}</p>
                 <button id="alert">Añadir al Carrito</button>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             </div>
@@ -28,7 +29,7 @@ Comercio Nacional e Internacional
     document.getElementById('alert').addEventListener('click', function() {
     Swal.fire({
     title: 'Producto',
-    imageUrl: "{{asset('imgs/img1.jpg')}}",
+    imageUrl: "{{asset('imgs/agua.jpg')}}",
     imageWidth: 200,
     imageHeight: 200,
     html:'<button>comprar</button>',

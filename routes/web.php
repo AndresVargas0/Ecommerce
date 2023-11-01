@@ -31,5 +31,5 @@ Route::post('/crearcuenta',[CrearCuentaController::class,'store'])->name('crearc
 Route::get('/ingresarcuenta',[IngresarCuentaController::class, 'index'])->name('ingresarcuenta');
 Route::post('/ingresarcuenta',[IngresarCuentaController::class, 'store'])->name('ingresarcuenta.post');
 
-Route::get('/agregarproductos',[AgregarProductoController::class, 'index']);
-Route::post('/agregarproducts',[AgregarProductoController::class, 'store'])->name('agregarproductos.post');
+Route::get('/agregarproductos',[AgregarProductoController::class, 'index'])->name('agregarproductos');
+Route::post('/agregarproductos',[AgregarProductoController::class, 'store'])->name('agregarproductos.post');

@@ -14,20 +14,21 @@ class AgregarProductoController extends Controller
 
     public function store(Request $request)
     {
+        
         // dd($request->all());
         $request->validate([
-            'producto' => 'required',
-            'cantidad' => 'required',
+            'producto' =>'required',
             'description' =>'required',
+            'cantidad' =>'required',
             'price' => 'required',
-            'discount' => 'required',
+            'discount' =>'required',
             'categoria' =>'required',
         ]);
 
         Productos::create([
             'producto' => $request->producto,
-            'cantidad'=> $request->cantidad,
             'description' =>$request->description,
+            'cantidad'=> $request->cantidad,
             'price' => $request->price,
             'discount' => $request->discount,
             'categoria' => $request->categoria,

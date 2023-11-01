@@ -23,7 +23,7 @@ Comercio Nacional e Internacional
     <button class="btn_vender" id="open-popup-button">Vender</button>
     <div id="popup-container" class="popup-container">
         <span id="close">X</span>
-        <form class="form_venta" action="{{ route('agregarproductos.post') }}" method="POST" novalidate>
+        <form class="form_venta" action="{{ route('agregarproductos.post') }}" method="POST">
             @csrf
             <h1 class="title_form">¿Que Producto <br> Desea Vender?</h1>
             <div class="img-destino mt-10 flex flex-col">

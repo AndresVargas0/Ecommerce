@@ -16,7 +16,6 @@ class Productos extends Model
         'price',
         'discount',
         'categoria',
-        ''
     ];
 
     public function user(){
